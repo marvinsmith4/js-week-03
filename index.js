@@ -36,7 +36,7 @@ const double = (numOne) =>
   // by using a closure; however, the function below is a pure
   // function that only returns 2; edit the function below so
   // it works as expected
-  ((numTwo) => numTwo)(2)
+  ((numTwo) => numOne * numTwo)(2)
 
 
 const closure = () => (
@@ -55,7 +55,7 @@ const purifyMe = () => (
 
 const closureWannaBe = () =>
   // rewrite this function to use a closure
-  ((room, board) => room + board)(800, 150)
+  ((room) => (board) => room + board)(800)(150)
 
 
 
