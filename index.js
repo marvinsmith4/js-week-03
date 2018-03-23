@@ -43,22 +43,21 @@ const closure = () => (
   (x) =>
     (y) =>
       (z) => x + y + z
-) // <-- apply arguments here so the above function
+)(1)(2)(3) // <-- apply arguments here so the above function
   // evaluates to a number (hint: p. 23)
 
 
 const purifyMe = () => (
   // currently, this function is the same as the
   // closure above; rewrite it as a pure function
-  (x) =>
-    (y) =>
-      (z) => x + y + z
-) // <-- apply arguments to your pure function
+  (x, y, z) => x + y + z)(1, 2, 3) // <-- apply arguments to your pure function
 
 
 const closureWannaBe = () =>
   // rewrite this function to use a closure
   ((room, board) => room + board)(800, 150)
+
+
 
 
 // that's all!
